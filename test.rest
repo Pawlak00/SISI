@@ -1,0 +1,4 @@
+POST http://localhost:12345/predict/cd060441c248 
+content-type: application/json
+
+{}

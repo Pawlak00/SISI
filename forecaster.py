@@ -25,7 +25,7 @@ def make_influx_call(id):
     
     query = 'from(bucket:"org")\
         |> range(start: -200m)\
-        |> filter(fn:(r) => r._measurement == "{id}")'.format(id = id)
+        |> filter(fn:(r) => r.id == "{id}")'.format(id = id)
     print(query)
     result = query_api.query(org=org, query=query)
     results = []
